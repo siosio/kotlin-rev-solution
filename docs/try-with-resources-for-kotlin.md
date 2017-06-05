@@ -7,8 +7,8 @@
 useを使います。
 
     val inputStream = Thread.currentThread().contextClassLoader.getResourceAsStream("hogehoge")
-    java.io.InputStreamReader(inputStream).use {
-        // `it`がInputStreamReaderのインスタンス
+    inputStream.use {
+        // `it`がInputStreamのインスタンス
         val b = it.read()
     }
 
